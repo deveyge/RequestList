@@ -1,17 +1,17 @@
-import { MainPage } from "pages/MainPage";
+import { RequestPage } from "pages/RequestPage";
 import { RouteProps } from "react-router-dom";
 
 export enum AppRoutes {
-  MAIN = "main",
+  REQUEST = "request",
 }
 
 export const RoutePath: Record<AppRoutes, string> = {
-  [AppRoutes.MAIN]: "/",
+  [AppRoutes.REQUEST]: "/request",
 };
 
 export const routeConfig: Record<AppRoutes, RouteProps> = {
-  [AppRoutes.MAIN]: {
-    path: RoutePath.main,
-    element: <MainPage />,
+  [AppRoutes.REQUEST]: {
+    path: RoutePath.request,
+    element: <RequestPage />,
   },
 };
