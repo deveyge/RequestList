@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
+import { Button } from "shared/ui/Button";
 
-const RequestCreateBtn = () => {
+const RequestCreationButton = () => {
   return (
-    <div>
-      <button>
-        <Link to={"/request/new"}>Создать заявку</Link>
-      </button>
-    </div>
+    <Link to="/requests/new">
+      <Button>Создать заявку</Button>
+    </Link>
   );
 };
 
-export default RequestCreateBtn;
+export default RequestCreationButton;

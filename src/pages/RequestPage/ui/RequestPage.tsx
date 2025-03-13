@@ -4,7 +4,7 @@ import { RequestList } from "widgets/RequestList";
 export default function RequestPage() {
   return (
     <div>
-      <div className="text-white">RequestPage</div>
+      <h1 className="pb-4 text-center text-xl font-semibold">Список задач</h1>
       <RequestList />
       <RequestCreateBtn />
     </div>
