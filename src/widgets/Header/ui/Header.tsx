@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Header() {
   return (
     <div>
-      <Link to={"/request"}>requestpage</Link>
+      <Link to={"/requests"}>requestpage</Link>
     </div>
   );
 }
