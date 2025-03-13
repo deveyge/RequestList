@@ -1,14 +1,12 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { useLocalStorage } from 'shared/lib/hooks/useLocalStorage';
-
+import { Request } from 'entities/request/model/types'
 interface RequestState {
   requests: Request[];
 }
 
-const { getItem, setItem } = useLocalStorage();
 
 const initialState: RequestState = {
-  requests: getItem('requests') || [],
+  requests: [],
 };
 
 export const requestSlice = createSlice({
@@ -17,7 +15,6 @@ export const requestSlice = createSlice({
   reducers: {
     createRequest: (state, action: PayloadAction<Request>) => {
       state.requests.push(action.payload);
-      setItem('requests', state.requests);
     },
   },
 });
