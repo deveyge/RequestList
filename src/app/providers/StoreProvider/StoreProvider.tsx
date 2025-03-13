@@ -5,6 +5,6 @@ interface StoreProviderProps {
   children: React.ReactNode;
 }
 
-export const StoreProvider: React.FC<StoreProviderProps> = ({ children }) => {
+export const StoreProvider = ({ children }: StoreProviderProps) => {
   return <Provider store={store}>{children}</Provider>;
 };

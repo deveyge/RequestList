@@ -1,5 +1,11 @@
+import { RequestForm } from "widgets/RequestForm";
+
 const RequestCreatePage = () => {
-  return <div>asfasfsafasf</div>;
+  return (
+    <div>
+      <RequestForm onSubmit={} />
+    </div>
+  );
 };
 
 export default RequestCreatePage;

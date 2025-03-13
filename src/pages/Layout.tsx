@@ -4,7 +4,7 @@ import { ThemeSwitcher } from "shared/ThemeSwitcher";
 
 function layout() {
   return (
-    <div className="to-muted bg-gradient-to-b from-background">
+    <div className="">
       <Header />
       <ThemeSwitcher />
       <main className="container mx-auto min-h-screen px-4 py-8">
