@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '../../../app/store/store';
 import { deleteRequest } from '../../../app/store/requestSlice';
 import RequestDetail from 'widgets/RequestDetail/ui/RequestDetail';
+import RequestDeleteBtn from 'features/RequestDelete/ui/RequestDeleteBtn';
 
 
 const RequestDetailPage = () => {
@@ -27,6 +28,7 @@ const RequestDetailPage = () => {
     <div className="mx-auto p-4 max-w-[700px]">
       <h1 className="text-2xl font-bold mb-4 text-center">Детальная страница заявки</h1>
       <RequestDetail request={request} />
+      <RequestDeleteBtn onRequestDelete={handleDeleteRequest}></RequestDeleteBtn>
     </div>
   );
 };

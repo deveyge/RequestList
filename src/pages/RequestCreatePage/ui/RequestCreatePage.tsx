@@ -1,9 +1,9 @@
 import { RequestForm } from "widgets/RequestForm";
 import { useNavigate } from "react-router-dom";
-import createNewRequest from "features/request-create/model/createRequest";
 import { Request } from "entities/request/model/types";
 import { v4 as uuidv4 } from "uuid";
 import { useAppDispatch } from "app/store/hooks/useAppDispatch";
+import { createRequest } from "app/store/requestSlice";
 
 const RequestCreatePage = () => {
   const navigate = useNavigate();
@@ -15,7 +15,7 @@ const RequestCreatePage = () => {
       id: uuidv4(),
       createdAt: new Date().toLocaleDateString(),
     };
-    createNewRequest(newRequest, dispatch);
+    dispatch(createRequest(newRequest));
     navigate("/requests");
   };
   return (
