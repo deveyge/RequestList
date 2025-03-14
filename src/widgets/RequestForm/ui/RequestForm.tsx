@@ -46,11 +46,11 @@ const RequestForm = ({ onSubmit, initialValues }: RequestFormProps) => {
   );
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit} className="space-y-4 max-w-[700px] mx-auto">
       <div>
         <label
           htmlFor="title"
-          className="block text-sm font-medium text-gray-700"
+          className="block font-medium"
         >
           Название:
         </label>
@@ -61,14 +61,14 @@ const RequestForm = ({ onSubmit, initialValues }: RequestFormProps) => {
           onChange={(e) => setTitle(e.target.value)}
           required
           placeholder="Введите название заявки"
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+          className="block w-full rounded-md bg-foreground px-3 py-1.5 focus:outline-2 focus:outline-primary placeholder:text-gray-400 sm:text-sm/6 shadow-sm"
         />
       </div>
 
       <div>
         <label
           htmlFor="description"
-          className="block text-sm font-medium text-gray-700"
+          className="block font-medium"
         >
           Описание:
         </label>
@@ -79,14 +79,14 @@ const RequestForm = ({ onSubmit, initialValues }: RequestFormProps) => {
           onChange={(e) => setDescription(e.target.value)}
           required
           placeholder="Введите описание заявки"
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+          className="block w-full rounded-md bg-foreground px-3 py-1.5 focus:outline-2 focus:outline-primary placeholder:text-gray-400 sm:text-sm/6 shadow-sm"
         />
       </div>
 
       <div>
         <label
           htmlFor="category"
-          className="block text-sm font-medium text-gray-700"
+          className="block font-medium"
         >
           Категория:
         </label>
@@ -100,15 +100,14 @@ const RequestForm = ({ onSubmit, initialValues }: RequestFormProps) => {
           }))}
           required
           placeholder="Выберите категорию"
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+          className=" focus:border-primary focus:ring-primary focus:border-2 block w-full rounded-md bg-foreground px-3 py-1.5 placeholder:text-gray-400 sm:text-sm/6 shadow-sm"
         />
       </div>
 
       <Button
         type="submit"
-        className="rounded bg-indigo-600 px-4 py-2 font-bold text-white hover:bg-indigo-700"
       >
-        Создать задачу
+        Создать заявку
       </Button>
     </form>
   );

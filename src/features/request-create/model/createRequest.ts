@@ -7,7 +7,7 @@ const createNewRequest = (request: Request, dispatch: AppDispatch) => {
   try {
     dispatch(createRequest(request));
   } catch (error) {
-    console.error('Failed to create request:', error);
+    console.error('Не удалось создать заявку', error);
   }
 };
 

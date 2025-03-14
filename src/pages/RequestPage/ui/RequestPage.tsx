@@ -6,10 +6,10 @@ import RequestsList from "widgets/RequestList/ui/RequestList";
 export default function RequestPage() {
   return (
     <div>
-      <h1 className="pb-4 text-center text-xl font-semibold">Список задач</h1>
-      <div className="flex flex-col gap-10">
+      <h1 className="pb-4 text-center text-xl font-semibold">Список заявок</h1>
+      <div className="flex flex-col gap-10 max-w-[700px] mx-auto">
         <RequestsList/>
-        <RequestCreateBtn />
+        <div className="ml-auto"><RequestCreateBtn /></div>
       </div>
     </div>
   );
