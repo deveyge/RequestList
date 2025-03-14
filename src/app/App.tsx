@@ -3,6 +3,7 @@ import Layout from "../pages/Layout";
 import UseTheme from "./providers/ThemeProvider/lib/UseTheme";
 import { StoreProvider } from "./providers/StoreProvider/StoreProvider";
 
+
 export default function App() {
   const { theme } = UseTheme();
   return (
