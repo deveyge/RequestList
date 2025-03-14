@@ -6,15 +6,25 @@
 @layer base {
   :root {
     --primary: #c4b5fd;
+    --secondary: white;
     --bg-primary: #f0f0f0;
+    --bg-secondary: white;
     --text-primary: #534e4e;
     --font-family-base: "Montserrat", sans-serif;
     --font-weight-base: 400;
     --accent: #9388c0;
+    --form: #ebebeb;
+    --input: #ebebeb;
   }
   .dark {
+    --primary: #4e2a73;
     --bg-primary: #231631;
+    --bg-secondary:#433058;
+    --secondary: #4e2a73;
     --text-primary: #ebebeb;
+    --accent: #7d44b6;
+    --form:#2e213b;
+    --input: #2e213b;
   }
 }
 

@@ -6,7 +6,7 @@ import { Category } from "entities/category/model/types";
 
 interface RequestFormProps {
   onSubmit: (formData: Omit<Request, "id" | "createdAt">) => void;
-  initialValues?: Partial<Request>;
+  initialValues?: Omit<Request, 'id' | 'createdAt'>;
 }
 
 const RequestForm = ({ onSubmit, initialValues }: RequestFormProps) => {
@@ -30,6 +30,20 @@ const RequestForm = ({ onSubmit, initialValues }: RequestFormProps) => {
     }
   }, [initialValues]);
 
+  // const handleSubmit = useCallback(
+  //   (e: React.FormEvent) => {
+  //     e.preventDefault();
+  //     if (!title || !description || !category) {
+  //       alert("Заполните все поля!");
+  //       return;
+  //     }
+  //     onSubmit({ title, description, category });
+  //     setTitle("");
+  //     setDescription("");
+  //     setCategory("");
+  //   },
+  //   [title, description, category, onSubmit],
+  // );
   const handleSubmit = useCallback(
     (e: React.FormEvent) => {
       e.preventDefault();
@@ -38,12 +52,9 @@ const RequestForm = ({ onSubmit, initialValues }: RequestFormProps) => {
         return;
       }
       onSubmit({ title, description, category });
-      setTitle("");
-      setDescription("");
-      setCategory("");
     },
     [title, description, category, onSubmit],
-  );
+);
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4 max-w-[700px] mx-auto">
@@ -61,7 +72,7 @@ const RequestForm = ({ onSubmit, initialValues }: RequestFormProps) => {
           onChange={(e) => setTitle(e.target.value)}
           required
           placeholder="Введите название заявки"
-          className="block w-full rounded-md bg-foreground px-3 py-1.5 focus:outline-2 focus:outline-primary placeholder:text-gray-400 sm:text-sm/6 shadow-sm"
+          className="block bg-input w-full rounded-md bg-foreground border border-gray-300 hover:border-gray-400 dark:border-none  px-3 py-1.5 focus:outline-2 focus:outline-primary placeholder:text-gray-400 sm:text-sm/6 shadow-sm"
         />
       </div>
 
@@ -79,7 +90,7 @@ const RequestForm = ({ onSubmit, initialValues }: RequestFormProps) => {
           onChange={(e) => setDescription(e.target.value)}
           required
           placeholder="Введите описание заявки"
-          className="block w-full rounded-md bg-foreground px-3 py-1.5 focus:outline-2 focus:outline-primary placeholder:text-gray-400 sm:text-sm/6 shadow-sm"
+          className="block bg-input w-full rounded-md bg-foreground border border-gray-300 hover:border-gray-400 dark:border-none  px-3 py-1.5 focus:outline-2 focus:outline-primary placeholder:text-gray-400 sm:text-sm/6 shadow-sm"
         />
       </div>
 
@@ -100,14 +111,13 @@ const RequestForm = ({ onSubmit, initialValues }: RequestFormProps) => {
           }))}
           required
           placeholder="Выберите категорию"
-          className=" focus:border-primary focus:ring-primary focus:border-2 block w-full rounded-md bg-foreground px-3 py-1.5 placeholder:text-gray-400 sm:text-sm/6 shadow-sm"
         />
       </div>
 
       <Button
         type="submit"
       >
-        Создать заявку
+        Сохранить
       </Button>
     </form>
   );

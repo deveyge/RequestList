@@ -19,7 +19,7 @@ export const Button = ({
   return (
     <button
       className={classNames(
-        "bg-primary hover:bg-accent rounded-lg px-4 py-2 font-semibold transition-colors duration-300 hover:text-white",
+        "bg-primary focus:outline-2 focus:outline-primary hover:bg-accent rounded-lg px-4 py-2 font-semibold transition-colors duration-300 hover:text-white",
         {},
         [className || ""],
       )}

@@ -6,7 +6,11 @@ module.exports = {
     extend: {
       colors: {
           'primary': 'var(--primary)',
-          'accent': 'var(--accent)'
+          'accent': 'var(--accent)',
+          'form': 'var(--form)',
+          'input': 'var(--input)',
+          'secondary': 'var(--secondary)',
+          'bg-primary': 'var(--bg-primary)',
       },
   }
   },

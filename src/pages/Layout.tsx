@@ -1,6 +1,5 @@
 import { AppRouter } from "app/providers/router";
 import { Header } from "../widgets/Header";
-import { ThemeSwitcher } from "shared/ThemeSwitcher";
 import { useLocalStorage } from "shared/lib/hooks/useLocalStorage";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
@@ -26,8 +25,7 @@ function layout() {
   return (
     <div className="">
       <Header />
-      <ThemeSwitcher />
-      <main className="container mx-auto min-h-screen px-4 py-8">
+      <main className="container mx-auto px-4 min-h-screen">
         <AppRouter />
       </main>
     </div>

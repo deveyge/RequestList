@@ -3,5 +3,5 @@ export interface Request {
   title: string;
   description: string;
   category: string; 
-  createdAt?: string; 
+  createdAt: string; 
 }

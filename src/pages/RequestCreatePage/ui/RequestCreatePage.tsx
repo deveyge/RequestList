@@ -19,7 +19,7 @@ const RequestCreatePage = () => {
     navigate("/requests");
   };
   return (
-    <div>
+    <div className="py-10">
       <RequestForm onSubmit={handleSubmit} />
     </div>
   );

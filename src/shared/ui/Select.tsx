@@ -33,7 +33,7 @@ const Select = ({
         value={value}
         onChange={onChange}
         className={classNames(
-          "focus:shadow-outline block w-full appearance-none rounded border border-gray-300 bg-white px-4 py-2 pr-8 leading-tight hover:border-gray-400 focus:outline-none",
+          "bg-input dark:border-none focus:border-primary focus:ring-primary focus:border-2 block w-full rounded-md bg-foreground placeholder:text-gray-400 sm:text-sm/6 shadow-s focus:shadow-outline appearance-none border border-gray-300 bg-white px-4 py-2 pr-8 leading-tight hover:border-gray-400 focus:outline-none ",
           {},
           [className || ""],
         )}
