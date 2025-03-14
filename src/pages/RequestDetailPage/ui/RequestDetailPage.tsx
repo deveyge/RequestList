@@ -6,7 +6,7 @@ import { deleteRequest, updateRequest } from '../../../app/store/requestSlice';
 import RequestDetail from 'widgets/RequestDetail/ui/RequestDetail';
 import RequestDeleteBtn from 'features/RequestDelete/ui/RequestDeleteBtn';
 import RequestUpdateBtn from 'features/RequestUpdate/ui/RequestUpdateBtn';
-import Modal from 'shared/ui/Modal';
+import { Modal } from 'shared/ui/Modal';
 import { RequestForm } from 'widgets/RequestForm';
 import { Request } from 'entities/request/model/types'
 

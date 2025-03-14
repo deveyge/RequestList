@@ -1,5 +1,5 @@
 import { RootState } from "app/store/store";
-import { RequestCreateBtn } from "features/request-create";
+import { RequestCreateBtn } from "features/RequestCreate";
 import { useSelector } from "react-redux";
 import RequestsList from "widgets/RequestList/ui/RequestList";
 

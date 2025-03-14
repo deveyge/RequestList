@@ -2,12 +2,13 @@ import { RequestForm } from "widgets/RequestForm";
 import { useNavigate } from "react-router-dom";
 import { Request } from "entities/request/model/types";
 import { v4 as uuidv4 } from "uuid";
-import { useAppDispatch } from "app/store/hooks/useAppDispatch";
 import { createRequest } from "app/store/requestSlice";
+import { useDispatch } from "react-redux";
+import { AppDispatch } from "app/store/store";
 
 const RequestCreatePage = () => {
   const navigate = useNavigate();
-  const dispatch = useAppDispatch();
+  const dispatch = useDispatch<AppDispatch>();
 
   const handleSubmit = (formData: Omit<Request, "id" | "createdAt">) => {
     const newRequest: Request = {
